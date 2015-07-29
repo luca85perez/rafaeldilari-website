@@ -82,21 +82,21 @@
 
 </main>
 
-<div class="float-btn  float-btn--previous">
+<div class="float-btn  float-btn--previous  js-float-btn">
   <?php
     previous_post_link(
       '%link',
-      '<span>Anterior</span>',
+      '<div class="float-btn__icon"><svg><use xlink:href="#icon-next" /></svg></div>',
       TRUE
     );
   ?>
 </div>
 
-<div class="float-btn  float-btn--next">
+<div class="float-btn  float-btn--next  js-float-btn">
   <?php
     next_post_link(
       '%link',
-      '<span>Próximo</span>',
+      '<div class="float-btn__icon"><svg><use xlink:href="#icon-next" /></svg></div>',
       TRUE
     );
   ?>
