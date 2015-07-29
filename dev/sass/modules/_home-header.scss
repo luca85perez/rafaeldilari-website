@@ -1,0 +1,68 @@
+.home-header {
+  position: relative;
+  height: 100vh;
+  color: $branco;
+
+
+
+
+
+  &__container {
+    @include container;
+    position  : absolute;
+    top       : 50%;
+    left      : 50%;
+    // margin : $blh*3 auto $blh*8;
+    margin    : 0 auto;
+    padding   : 0 $blh 0;
+    transform : translateX(-50%) translateY(-50%);
+  }
+  // __container
+
+
+
+
+  &__content {
+    max-width: 35em;
+  }
+
+
+
+
+
+  &__title {
+    @extend %f-l;
+    margin-top: $blh*3;
+    color: currentColor;
+
+
+    @include respond-min($b-tablet-large ) {
+      margin-top: 0;
+    }
+  }
+
+
+
+
+  .btn-group {
+    margin-bottom: $blh*3;
+
+    @include respond-min($b-tablet-large ) {
+      margin-bottom: 0;
+    }
+  }
+
+
+
+
+
+  &__lead {
+    @extend %h3;
+    @extend %f-r;
+    line-height: $blh;
+    color: currentColor;
+  }
+
+
+
+}

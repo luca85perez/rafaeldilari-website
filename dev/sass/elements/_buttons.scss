@@ -1,0 +1,40 @@
+.btn-group {
+  .btn + .btn {
+    margin-left: $blh/2;
+  }
+}
+
+
+
+.btn {
+  display: inline-block;
+  margin-top: $blh;
+  padding: $blh/2;
+  text-transform: uppercase;
+  text-align: center;
+
+
+  &--ghost {
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+    transition: background-color $t-time $t-function, color $t-time $t-function, border-color $t-time $t-function;
+    will-change: background-color, color, border-color;
+  }
+
+
+
+  &--light {
+    color: $branco;
+    border-color: currentColor;
+
+
+    &:hover,
+    &:focus {
+      background-color: $branco;
+      color: $preto;
+      border-color: $branco;
+    }
+  }
+
+}

@@ -1,0 +1,250 @@
+.masonry {
+
+  &__header {
+    @include clearfix();
+    margin-bottom: $blh;
+
+    button {
+      margin-top: $blh/4;
+      margin-bottom: $blh/4;
+    }
+
+    @include respond-min($b-tablet-large) {
+      margin-bottom: $blh*2;
+
+      button {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    @include col(1/1);
+
+    @include respond-min($b-tablet-large) {
+      @include col(1/3);
+    }
+  }
+
+  &__filter {
+    @include col(1/1);
+    margin-top: $blh*1.5;
+    margin-right: 0;
+    padding: 0;
+    color: $branco;
+    background-color: transparent;
+    text-align: left;
+
+    @include respond-min($b-tablet-large) {
+      @include col(2/3);
+      padding: 0;
+      color: initial;
+      background-color: transparent;
+      text-align: right;
+    }
+
+    button {
+      @extend %small;
+      @extend %f-b;
+      margin-left: $blh/4;
+      padding: $blh/4;
+      border: 0;
+      text-transform: uppercase;
+      background: $cinza--dark;
+      outline: none;
+
+      &.active {
+        background: $preto;
+      }
+
+      @include respond-min($b-tablet-large) {
+        padding: 0 $blh/4;
+        background: none;
+        color: $cinza--dark;
+
+        &.active {
+          color: $preto;
+          background: none;
+        }
+      }
+    }
+  }
+
+  &__grid {
+    @include clearfix();
+    text-align: justify;
+    will-change: transform;
+  }
+
+
+
+
+
+  &__item {
+    // @include col(1/1);
+    display: none;
+    margin-bottom: $blh/2;
+    width: 100%;
+    // float: left;
+    // padding: 0 $blh/2;
+
+    @include respond-min($b-tablet-small) {
+      width: 50%;
+      float: left;
+      padding: 0 $blh/4;
+    }
+
+    // &:nth-child(2n) {
+    //   float: left;
+    // }
+
+    a {
+      position: relative;
+      display: block;
+      height: 100%;
+      text-transform: none;
+
+      &:after {
+        content: '';
+        display: none;
+      }
+
+      @include respond-min($b-tablet-small) {
+        &:hover {
+          .masonry__item__image {
+            &:after {
+              opacity: .7;
+            }
+          }
+
+          .masonry__item__content {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+          // img {
+          //   filter: grayscale(1);
+          // }
+
+          svg {
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+
+    &__container {
+      position: relative;
+      min-height: $blh*10;
+    }
+
+    &__image {
+      position: relative;
+
+      @include respond-min($b-tablet-small) {
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: $branco;
+          opacity: 0;
+          transition: opacity $t-time $t-function;
+          will-change: opacity;
+        }
+      }
+
+
+      img {
+        display: block;
+        // transition: all $t-time $t-function;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      color: $branco;
+      background-color: $preto;
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: $blh/2;
+
+        @include respond-min($b-tablet-small) {
+          margin-top: $blh/4;
+          margin-bottom: $blh/4;
+          margin-left: $blh;
+        }
+      }
+
+      svg {
+        position: absolute;
+        right: $blh;
+        bottom: $blh/4;
+        width: $blh*1.5;
+        height: $blh*1.5;
+        fill: currentColor;
+        stroke: currentColor;
+
+        @include respond-min($b-tablet-small) {
+          width: $blh*2;
+          height: $blh*2;
+        }
+      }
+
+      @include respond-min($b-tablet-small) {
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        background-color: transparent;
+        color: $preto;
+        transform: translateY(-$blh);
+        opacity: 0;
+        transition: opacity $t-time $t-function $t-time/2,
+                    transform $t-time $t-function $t-time/2;
+        will-change: opacity, transform;
+
+        h2 {
+          position: relative;
+          top: 40%;
+          margin-top: 0;
+          margin-bottom: 0;
+          margin-left: 0;
+          transform: translateY(-50%);
+
+          &:after {
+            display: none;
+          }
+        }
+
+        svg {
+          left: 50%;
+          right: auto;
+          bottom: 25%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: opacity $t-time*2 $t-function $t-time/2;
+          will-change: opacity;
+        }
+      }
+
+
+    }
+
+
+
+  }
+
+
+
+
+}

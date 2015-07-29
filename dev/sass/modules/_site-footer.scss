@@ -1,0 +1,98 @@
+.site-footer {
+  $bg: $preto;
+
+
+  position   : relative;
+  width      : 100%;
+  color: $cinza;
+  z-index    : $z-terreo;
+  background : $bg;
+
+  .home & {
+    display: none;
+    position: fixed;
+    bottom  : 0;
+
+    @include respond-min($b-tablet-large) {
+      display: block;
+    }
+  }
+
+
+
+
+
+  &__container {
+    @include container();
+    position : relative;
+    padding: 0 $blh;
+  }
+  //__container
+
+
+
+
+
+
+  &__col {
+    &[data-hidden] {
+      display: none;
+    }
+
+    @include respond-min($b-tablet-large) {
+      @include span(1/3);
+
+      &[data-hidden] {
+        display: block;
+      }
+
+      &[data-show] {
+        display: none;
+      }
+    }
+  }
+  //__col
+
+
+
+
+  &__copy {
+    display: block;
+    margin: 0;
+    text-align: center;
+    // text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    @include respond-min($b-tablet-large) {
+      margin: $blh 0;
+      text-align: left;
+    }
+  }
+
+
+
+
+  &__dev {
+    display: block;
+    margin: 0 0 $blh;
+    text-align: center;
+    // text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    a {
+      color: $branco;
+      transition: all $t-time $t-function;
+
+      &:hover,
+      &:focus {
+        color: $cinza--dark;
+      }
+    }
+
+    @include respond-min($b-tablet-large) {
+      margin: $blh 0;
+      text-align: right;
+    }
+  }
+  //__dev
+}

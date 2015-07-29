@@ -1,0 +1,26 @@
+{
+  "name": "rafaeldilari",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LucasPereira",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-newer": "*",
+    "grunt-sass": "*",
+    "grunt-svgstore": "^0.5.0",
+    "load-grunt-tasks": "*",
+    "node-sass": "^3.2.0"
+  }
+}

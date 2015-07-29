@@ -1,0 +1,34 @@
+.home-bg {
+  position   : static;
+  width      : 100%;
+  height     : 100%;
+  text-align : center;
+  background : $preto;
+  overflow   : hidden;
+
+
+  @include respond-min($b-tablet-large ) {
+    position   : relative;
+  }
+
+
+
+  &__img {
+    filter     : grayscale(100%) brightness(50%);
+
+    position   : absolute;
+    top        : $blh*3;
+    right      : 0;
+    display    : block;
+    min-width  : 100%;
+    max-width  : initial;
+    width      : auto;
+    min-height : 100%;
+  }
+
+
+
+
+
+
+}

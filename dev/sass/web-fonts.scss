@@ -1,0 +1,43 @@
+//Libs
+@import "sass-toolkit/stylesheets/toolkit";
+
+//Config
+@import "config/vars";
+
+@include font-face(
+  'rafaeldilari_webfont',
+  $fonts-bold-italic,
+  700,
+  italic
+);
+
+@include font-face(
+  'rafaeldilari_webfont',
+  $fonts-bold,
+  700,
+  normal
+);
+
+@include font-face(
+  'rafaeldilari_webfont',
+  $fonts-light,
+  300,
+  normal
+);
+
+@include font-face(
+  'rafaeldilari_webfont',
+  $fonts-regular-italic,
+  400,
+  italic
+);
+
+@include font-face(
+  'rafaeldilari_webfont',
+  $fonts-regular,
+  400,
+  normal
+);
+
+
+

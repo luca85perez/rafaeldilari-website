@@ -1,0 +1,27 @@
+%reset-list {
+  padding: 0;
+  list-style: none;
+}
+
+%e-text-shadow {
+  text-shadow: $e-text-shadow;
+}
+
+%e-box-shadow {
+  box-shadow: $e-box-shadow;
+}
+
+.cf {
+  @include clearfix();
+}
+
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}

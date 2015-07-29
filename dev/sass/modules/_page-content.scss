@@ -1,0 +1,134 @@
+.page-content {
+  margin: 0 auto;
+  padding: $blh 0 0;
+
+
+
+
+
+
+  a {
+    @extend %small;
+    @extend %f-b;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+
+
+    &:after {
+      position: absolute;
+      right: -$blh*1.5;
+      top: -$blh/3;
+      content: '';
+      display: inline-block;
+      width: $blh*1.5;
+      height: $blh*1.5;
+      vertical-align: bottom;
+      background-image: url(../img/svg/icons/icon-arrow-right.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition  : transform $t-time $t-function;
+      will-change : transform;
+    }
+
+    &:hover {
+      &:after {
+        transform: translateX($blh/2);
+      }
+    }
+  }
+
+
+  figure {
+    div {
+      position: relative;
+      overflow: hidden;
+      filter   : grayscale(100%);
+      transition  : all $t-time $t-function;
+      will-change : filter;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        margin: $blh/2;
+        border: 2px solid $branco;
+        transition  : opacity $t-time $t-function, transform $t-time $t-function;
+        will-change : opacity, transform;
+      }
+
+      &:hover {
+        filter: grayscale(0%);
+
+        &:after {
+          opacity: 0;
+          transform: scale(.95);
+        }
+      }
+    }
+  }
+
+
+
+
+  &__row {
+    @include clearfix();
+    margin-bottom: $blh*3;
+  }
+
+
+  &__text {
+    @include respond-min($b-tablet-small) {
+      @include col(1/2);
+
+      .right & {
+        float: right;
+        margin-right: 0;
+      }
+    }
+
+  }
+
+
+  &__img {
+    margin-top: $blh;
+
+    @include respond-min($b-tablet-small) {
+      @include col(1/2);
+      margin-right: 0;
+
+      .right & {
+        float: right;
+        margin-right: 3%;
+      }
+    }
+  }
+
+
+
+
+
+  &__section {
+    margin: -$blh*7 auto 0;
+    @include container();
+    padding: 0 $blh;
+
+    h2 {
+      @extend %h3;
+
+      &:after {
+        content: '';
+        display: block;
+        width: $blh/2;
+        height: 2px;
+        background-color: $preto;
+      }
+    }
+
+  }
+
+
+}

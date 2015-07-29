@@ -1,0 +1,23 @@
+.float-btn {
+  opacity: 1;
+  // pointer-events: auto;
+  position: fixed;
+  top: 50%;
+  display: inline-block;
+  color: $branco;
+  background: $preto;
+  transform: translateY(-50%);
+  z-index: $z-terreo;
+
+  &--previous {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  a {
+    display: block;
+  }
+}

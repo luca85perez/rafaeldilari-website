@@ -1,0 +1,34 @@
+.separator {
+  $height: $blh;
+  $color: $preto;
+
+
+  display: block;
+  height: $height;
+  margin-bottom: $blh*3;
+  text-align: center;
+  opacity: .13;
+
+
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    margin: 0 $blh;
+    height: 2px;
+    width: 25%;
+    background-color: $color;
+  }
+
+
+
+  &__icon {
+    display: inline-block;
+
+    svg {
+      width: $height;
+      height: $height;
+    }
+  }
+
+}

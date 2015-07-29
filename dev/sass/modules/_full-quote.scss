@@ -1,0 +1,70 @@
+.full-quote {
+  padding: $blh*4 0 $blh*3;
+  color: $branco;
+  background: $preto;
+
+  @include respond-min($b-tablet-large) {
+    padding: $blh*3 0;
+  }
+
+
+
+  &__container {
+    @include container();
+  }
+
+
+
+
+
+  &__text {
+    position: relative;
+    margin: 0 $blh;
+
+    @include respond-min($b-tablet-large) {
+      max-width: $blh*25;
+      margin: 0 auto;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -$blh*2;
+      left: 0;
+      display: inline-block;
+      width: $blh*1.5;
+      height: $blh*1.5;
+      background: url(../img/svg/icons/icon-quote.svg) no-repeat;
+
+      @include respond-min($b-tablet-large) {
+        top: -$blh;
+        left: -$blh*2.5;
+        width: $blh*2;
+        height: $blh*2;
+      }
+    }
+
+    p {
+      @extend %h2;
+      @extend %f-l;
+      margin: 0;
+    }
+  }
+
+
+
+
+  &__author {
+    @extend %small;
+    @extend %f-r;
+    display: block;
+    margin-top: $blh;
+    text-transform: uppercase;
+
+    &:before {
+      content: '\2014 \00A0';
+      display: inline;
+    }
+  }
+}
+

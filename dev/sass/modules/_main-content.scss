@@ -1,0 +1,8 @@
+.main-content {
+  // height: 100%;
+  margin-top: $blh*3;
+
+  .home & {
+    margin-top: 0;
+  }
+}

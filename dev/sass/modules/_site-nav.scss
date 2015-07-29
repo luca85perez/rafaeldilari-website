@@ -1,0 +1,32 @@
+.site-nav {
+
+  $bg: $preto;
+
+  position   : fixed;
+  z-index    : $z-alto;
+  top        : 0;
+  right      : 0;
+  width      : 100%;
+  height     : 100vh;
+  background : $bg;
+
+  transform   : translateX(100%);
+  transition  : transform $t-time $t-function;
+  will-change : transform;
+
+
+
+
+  @include respond-min($b-mobile-large) {
+    max-width: 520px;
+  }
+
+
+
+  &.is-opened {
+    transform: translateX(0%);
+  }
+  //is-opened
+
+
+}

@@ -1,0 +1,7 @@
+.page-excerpt {
+  p {
+    @extend  %h2;
+    @extend %f-l;
+    margin-top: $blh/2;
+  }
+}

@@ -1,0 +1,52 @@
+.social-menu {
+  @extend %reset-list;
+  margin: 0;
+  text-align: center;
+
+  @include respond-min($b-tablet-small) {
+    // text-align: left;
+  }
+
+
+
+
+  .menu-item {
+    $height: $small-font-size;
+
+    display: inline-block;
+    margin: $blh 1em;
+
+    @include respond-min($b-tablet-large) {
+      margin: 1em;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $cinza--dark;
+      }
+    }
+
+    svg {
+      height: $height*1.5;
+      width: $height*1.5;
+      fill: $branco;
+      transition: all $t-time $t-function;
+
+
+      @include respond-min($b-tablet-large) {
+        height: $height*1.2;
+        width: $height*1.2;
+      }
+    }
+  }
+
+}

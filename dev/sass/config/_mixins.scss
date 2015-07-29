@@ -1,0 +1,45 @@
+//*****************************************
+//
+//  VISUALLY HIDDEN
+//
+//*****************************************
+@mixin visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+
+//*****************************************
+//
+//  MEDIA QUERIES
+//
+//*****************************************
+@mixin respond-min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin respond-max($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+
+//*****************************************
+//
+//  CONTAINER
+//
+//*****************************************
+@mixin container($width: 960px) {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $width;
+  width: 100%;
+
+  @include clearfix();
+}

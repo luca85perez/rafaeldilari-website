@@ -1,0 +1,93 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+::selection {
+  color            : darken($branco, 40);
+  background-color : $preto;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+
+body {
+  position: relative;
+  overflow-x : hidden;
+  cursor: default;
+  background-color: $branco;
+
+  &.is-locked {
+    overflow-y: hidden;
+
+    @include respond-min($b-mobile-large) {
+      &:after {
+        opacity   : .9;
+        transform : translateX(0%);
+      }
+    }
+  }
+
+  &:after {
+    content    : '';
+    position   : fixed;
+    top        : 0;
+    left       : 0;
+    height     : 100vh;
+    width      : calc(100% - 520px);
+    background : $branco;
+    opacity    : 0;
+    z-index    : $z-alto - 1; //abaixo do menu
+
+    transform   : translateX(-100%);
+    transition  : transform $t-time $t-function, opacity $t-time $t-function;
+    will-change : transform, opacity;
+  }
+}
+//body
+
+
+i {
+  font-style: normal;
+}
+
+p:empty {
+  display: none;
+}
+
+
+
+figure {
+  margin: 0;
+
+  img {
+    display       : block;
+    // border-radius : $blh/2;
+  }
+}
+
+
+
+img {
+  max-width : 100%;
+  width     : 100%;
+  height: auto;
+}
+
+
+
+ul {
+  padding-left: $blh;
+}
+
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}

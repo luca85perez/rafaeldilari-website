@@ -1,0 +1,31 @@
+.gallery {
+
+  &__grid {
+    @extend %reset-list;
+    @include clearfix();
+    text-align: justify;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-bottom: $blh/2;
+    width: 100%;
+    cursor: pointer;
+
+    @include respond-min($b-mobile-large) {
+      width: 50%;
+      float: left;
+      padding: 0 $blh/4;
+    }
+
+    @include respond-min($b-tablet-large) {
+      width: 33%;
+      float: left;
+      padding: 0 $blh/4;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

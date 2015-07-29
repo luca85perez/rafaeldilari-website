@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="bubble" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 45 45" enable-background="new 0 0 45 45" xml:space="preserve">
+<g>
+	<path fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" d="M40.7,20.4c0-9.8-7.9-17.7-17.7-17.7
+		c-9.8,0-17.7,7.9-17.7,17.7c0,9.2,7,16.7,15.9,17.6l-0.1,0.1l13.3,3.6l-1.7-6.4C37.5,32.1,40.7,26.6,40.7,20.4z"/>
+	<circle cx="13.6" cy="20" r="3"/>
+	<circle cx="22.6" cy="20" r="3"/>
+	<circle cx="32.6" cy="20" r="3"/>
+</g>
+</svg>

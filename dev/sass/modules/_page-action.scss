@@ -1,0 +1,73 @@
+.page-action {
+  padding: $blh*2 0 $blh*3;
+  text-align: center;
+  color: $branco;
+  background: {
+    repeat: no-repeat;
+    size: cover;
+  }
+
+  &.sobre {
+    background: {
+      image: url(../img/sobre/action-bg.jpg);
+    }
+  }
+
+  &.portfolio {
+    background: {
+      image: url(../img/portfolio/action-bg.jpg);
+    }
+  }
+
+
+  &__container {
+    @include container();
+  }
+
+
+  &__icon {
+    display: block;
+
+    &:before,
+    &:after {
+      content: '';
+      display: inline-block;
+      margin: 0 $blh;
+      height: 2px;
+      width: 25%;
+      background-color: currentColor;
+    }
+
+
+    svg {
+      height: $blh*3;
+      width: $blh*3;
+      vertical-align: -$blh;
+    }
+  }
+
+
+
+  &__title {
+    @extend %h3;
+    @extend %f-r;
+    margin-top: 0;
+  }
+
+
+
+  a {
+    &:after {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $branco;
+      color: $preto;
+      border-color: $branco;
+    }
+  }
+
+
+}

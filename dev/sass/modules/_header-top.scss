@@ -1,0 +1,108 @@
+.header-top {
+
+  $bg: $branco;
+
+  position   : fixed;
+  top        : 0;
+  left       : 0;
+  right      : 0;
+  padding   : $blh/2 0;
+  z-index    : $z-alto;
+  background : $bg;
+
+  // .home & {
+  //   position: fixed;
+  // }
+
+
+
+
+  &__container {
+    @include container();
+    position : relative;
+    padding   : 0 $blh;
+  }
+  //__container
+
+
+
+
+
+
+
+  &__logo {
+    position       : relative;
+    display        : inline-block;
+    vertical-align : middle;
+    // width          : 75%;
+    max-width      : $blh*8;
+
+    svg {
+      height: $blh*2;
+    }
+  }
+  //__logo
+
+
+
+
+
+
+
+
+
+
+  &__menu-btn {
+    display        : inline-block;
+    position       : absolute;
+    vertical-align : middle;
+    right          : $blh;
+    top            : $blh/4;
+    // width          : 11vw;
+    // max-width      : $blh*2;
+    z-index        : $z-alto + 1; // para aparecer por cima do menu que tem z-index alto
+
+    svg {
+      height: $blh*1.5;
+      width: $blh*1.5;
+    }
+
+    @include respond-min($b-mobile-large ) {
+      top : .5em;
+
+      // svg {
+      //   height: $blh*2;
+      //   width: $blh*2;
+      // }
+    }
+
+    .site-nav & {
+      top: 1em;
+      left: 1.5em;
+    }
+  }
+  //__menu-btn
+
+
+
+
+
+
+
+
+
+  &__menu-label {
+    display: none;
+    @extend %f-b;
+    vertical-align: middle;
+
+    @include respond-min($b-mobile-large ) {
+      display: inline-block;
+    }
+  }
+  //__menu-label
+
+
+
+
+}

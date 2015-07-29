@@ -1,0 +1,110 @@
+body {
+  font-size   : 90%;
+  line-height : $blh;
+  font-family : $f-body;
+  font-weight : 400;
+  color       : $preto;
+
+  @include respond-min($b-mobile-large ) {
+    font-size   : 100%;
+  }
+
+  @include respond-min($b-desktop-large) {
+    font-size: 120%;
+  }
+}
+
+h1, %h1 {
+  font-size     : $h1-font-size;
+  line-height   : $h1-line-height;
+  margin-top    : $h1-margin-top;
+  margin-bottom : 0;
+}
+
+h2, %h2 {
+  font-size     : $h2-font-size;
+  line-height   : $h2-line-height;
+  margin-top    : $h2-margin-top;
+  margin-bottom : 0;
+}
+
+h3, %h3 {
+  font-size     : $h3-font-size;
+  line-height   : $h3-line-height;
+  margin-top    : $h3-margin-top;
+  margin-bottom : 0;
+}
+
+h4, %h4 {
+  font-size     : $h4-font-size;
+  line-height   : $h4-line-height;
+  margin-top    : $h4-margin-top;
+  margin-bottom : 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+
+
+p, ul, ol, pre, table, blockquote {
+  margin-top    : $blh;
+  margin-bottom : 0;
+}
+
+hr {
+  border : 1px solid;
+  margin : -1px 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top    : 0;
+  margin-bottom : 0;
+}
+
+b, strong, em, small, code {
+  line-height: 1;
+}
+
+sup, sub {
+  vertical-align : baseline;
+  position       : relative;
+  top            : -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+small, %small {
+  font-size   : $small-font-size;
+  line-height : $small-line-height;
+}
+
+%f-b-i {
+  font-weight: 700;
+  font-style: italic;
+}
+
+%f-b {
+  font-weight: 700;
+  font-style: normal;
+}
+
+%f-l {
+  font-weight: 300;
+  font-style: normal;
+}
+
+%f-r-i {
+  font-weight: 400;
+  font-style: italic;
+}
+
+%f-r {
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,97 @@
+.page-header {
+  position      : relative;
+  height        : 70vh;
+  // min-height : 560px;
+  width         : 100%;
+  margin        : 0 auto;
+
+
+
+
+  &__bg {
+    position            : absolute;
+    overflow            : hidden;
+    top                 : 0;
+    left                : 0;
+    right               : -15em;
+    bottom              : 0;
+    backface-visibility : hidden;
+
+    @include respond-min($b-mobile-large) {
+      right: 0;
+    }
+
+    img {
+      position   : absolute;
+      top        : 0;
+      right      : 0;
+      display    : block;
+      min-width  : 100%;
+      max-width  : initial;
+      width      : auto;
+      min-height : 100%;
+      filter: grayscale(100%) brightness(50%);
+    }
+  }
+
+
+
+
+
+
+  &__title {
+    z-index    : $z-terreo;
+    position   : absolute;
+    top        : 40%;
+    left       : 50%;
+    margin     : 0 auto;
+    padding    : 0 $blh;
+    width      : 100%;
+    text-align : left;
+    max-width  : 960px;
+    transform  : translateX(-50%) translateY(-50%);
+
+    h1 {
+      @extend %f-l;
+      color: $branco;
+    }
+
+    p {
+      @extend %h3;
+      @extend %f-r;
+      line-height: $blh;
+      color: $preto;
+    }
+  }
+
+
+
+  &__icon {
+    position: absolute;
+    bottom: $blh;
+    left: 50%;
+    margin-left: -$blh;
+    border: 0;
+    background: none;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    transform-origin: center bottom;
+
+    &:focus,
+    &:active {
+      outline: 0;
+    }
+
+    svg {
+      width: $blh*2;
+      height: $blh*2;
+      fill: $branco;
+    }
+  }
+
+
+
+
+}

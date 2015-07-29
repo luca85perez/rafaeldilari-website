@@ -1,0 +1,60 @@
+.page-post {
+  margin-bottom: $blh*2;
+
+  hr {
+    margin-top: $blh;
+    margin-bottom: $blh;
+    opacity: .13;
+  }
+
+  h2 {
+    @extend  %h2;
+  }
+
+  h3 {
+    @extend  %h3;
+  }
+
+  h4 {
+    @extend  %h4;
+    font-weight: bolder;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: square inside;
+  }
+
+  ol {
+    padding-left: 0;
+    list-style: decimal inside;
+  }
+
+  blockquote {
+    @extend  %h3;
+    @extend %f-r-i;
+    margin-left: 0;
+    padding-left: $blh/2;
+    border-left: 2px solid $preto;
+    // font-style: italic;
+    line-height: 1.4;
+  }
+
+  a {
+    position: static;
+    display: inline;
+    text-transform: none;
+    font-size: 1em;
+    text-decoration: underline;
+
+    &:after {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+}

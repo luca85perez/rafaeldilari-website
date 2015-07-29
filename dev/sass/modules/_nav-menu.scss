@@ -1,0 +1,74 @@
+.nav-menu {
+  @extend %reset-list;
+  margin: 0;
+  height: 100%;
+
+
+
+  .menu-item {
+    $link-color: $branco;
+
+    position        : relative;
+    margin          : 0 auto;
+    height          : 20vh;
+    max-width       : 540px;
+    text-align      : center;
+
+
+    &:after {
+      content  : '';
+      position : absolute;
+      top      : 0;
+      right    : 0;
+      bottom   : 0;
+      left     : 0;
+
+      filter   : grayscale(100%) brightness(50%);
+      transition  : all $t-time $t-function;
+      will-change : filter;
+    }
+
+
+    &:nth-child(1):after { background: url(../img/menu/menu-home.jpg) no-repeat center 20%;  background-size: 80%; }
+    &:nth-child(2):after { background: url(../img/menu/menu-sobre.jpg) no-repeat center 5%; background-size: 80%; }
+    &:nth-child(3):after { background: url(../img/menu/menu-portfolio.jpg) no-repeat center 20%; background-size: 100%; }
+    &:nth-child(4):after { background: url(../img/menu/menu-blog.jpg) no-repeat center 10%; background-size: 100%; }
+    &:nth-child(5):after { background: url(../img/menu/menu-contato.jpg) no-repeat center 25%; background-size: 100%; }
+
+
+    &:hover {
+      &:after { filter: grayscale(0%) brightness(75%); }
+    }
+
+
+
+    a {
+      $size: 5vh;
+
+      position    : absolute;
+      top         : 50%;
+      left        : 50%;
+      display     : block;
+      height      : $size + 10vh;
+      width       : 100%;
+      // padding  : 8vh 0;
+      font-size   : $size;
+      line-height : $size + 10vh;
+      color       : $link-color;
+      text-align  : center;
+      transform   : translateX(-50%) translateY(-50%);
+      z-index     : $z-terreo;
+    }
+    //a
+
+  }
+  //.menu-item
+
+
+
+
+}
+//.nav-menu
+
+
+
