@@ -13,14 +13,14 @@
       <h2 class="helper-title">Mídias Sociais</h2>
       <ul class="social-menu">
         <li class="menu-item">
-        <a title="Facebook" target="_blank" href="http://www.facebook.com">
+        <a title="Facebook" target="_blank" href="//www.facebook.com/rafael.dilari">
           <svg>
             <use xlink:href="#icon-facebook" />
           </svg>
         </a>
         </li>
         <li class="menu-item">
-        <a title="Google+" target="_blank" href="http://www.google.com">
+        <a title="Google+" target="_blank" href="//plus.google.com/109095193727132422013/posts">
           <svg>
             <use xlink:href="#icon-google" />
           </svg>
@@ -50,7 +50,34 @@
 </footer>
 
 
-<script> var sitePath = '<?php echo get_template_directory_uri(); ?>'; </script>
+
+<?php
+$filter = isset($_GET['filter']) ? $_GET['filter'] : 'all';
+switch ($filter) {
+  case 'ator':
+    $filter = "[data-category='Ator']";
+    break;
+  case 'palhaco':
+    $filter = "[data-category='Palhaço']";
+    break;
+  case 'historias':
+    $filter = "[data-category='Contador de Histórias']";
+    break;
+  case 'roteirista':
+    $filter = "[data-category='Roteirista']";
+    break;
+  default:
+    $filter = "all";
+    break;
+}
+?>
+
+<script>
+  var sitePath = '<?php echo get_template_directory_uri(); ?>';
+  var effectIntro = true;
+  var masonryFilter = "<?php echo $filter; ?>";
+</script>
+
 <script src="//dev.rafaeldilari.com.br:35729/livereload.js"></script>
 
 <?php wp_footer(); ?>

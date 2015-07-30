@@ -3358,7 +3358,7 @@ var debounce = function (func, threshold, execAsap) {
 
   $gallery.lightGallery(config);
 }());
-;(function($) {
+;(function($, masonryFilter) {
   'use strict';
 
   var $body = $('body');
@@ -3366,10 +3366,11 @@ var debounce = function (func, threshold, execAsap) {
   var $trigger = $('.js-trigger-fadeout');
 
   var filterClicked = false;
+  var masonryFilter = masonryFilter || 'all';
 
   var config = {
     load: {
-		  filter: 'all'
+		  filter: masonryFilter
 	  },
     layout: {
 		  display: 'block'
@@ -3425,9 +3426,17 @@ var debounce = function (func, threshold, execAsap) {
     $trigger.trigger('click');
   };
 
+  $filterBtns.each
+
+  $filterBtns.each(function() {
+    if ( $(this).hasClass('active') ) {
+      changeTitle( $(this).html() );
+    }
+  });
 
 
-}($));
+
+}($, masonryFilter));
 ;(function(){
 
   'use strict';

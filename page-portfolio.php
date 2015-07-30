@@ -52,9 +52,6 @@
             <h2 class="masonry__title  js-grid-title">Todos</h2>
 
             <div class="masonry__filter">
-              <script>
-                  var effectIntro = true;
-              </script>
               <button class="js-filter" data-filter="all">Todos</button>
               <button class="js-filter" data-filter="[data-category='Ator']">Ator</button>
               <button class="js-filter" data-filter="[data-category='Contador de Histórias']">Contador de Histórias</button>

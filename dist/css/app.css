@@ -2184,7 +2184,7 @@ a {
     padding: 0.375em;
     border: 0;
     text-transform: uppercase;
-    background: #86898c;
+    background: #acacac;
     outline: none; }
     .masonry__filter button.active {
       background: #000; }
@@ -2192,7 +2192,7 @@ a {
       .masonry__filter button {
         padding: 0 0.375em;
         background: none;
-        color: #86898c; }
+        color: #acacac; }
         .masonry__filter button.active {
           color: #000;
           background: none; } }
@@ -2224,7 +2224,7 @@ a {
       display: none; }
     @media screen and (min-width: 640px) {
       .masonry__item a:hover .masonry__item__image:after {
-        opacity: .7; }
+        opacity: .85; }
       .masonry__item a:hover .masonry__item__content {
         opacity: 1;
         -webkit-transform: translateY(0);

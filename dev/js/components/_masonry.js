@@ -1,4 +1,4 @@
-(function($) {
+(function($, masonryFilter) {
   'use strict';
 
   var $body = $('body');
@@ -6,10 +6,11 @@
   var $trigger = $('.js-trigger-fadeout');
 
   var filterClicked = false;
+  var masonryFilter = masonryFilter || 'all';
 
   var config = {
     load: {
-		  filter: 'all'
+		  filter: masonryFilter
 	  },
     layout: {
 		  display: 'block'
@@ -65,6 +66,14 @@
     $trigger.trigger('click');
   };
 
+  $filterBtns.each
+
+  $filterBtns.each(function() {
+    if ( $(this).hasClass('active') ) {
+      changeTitle( $(this).html() );
+    }
+  });
 
 
-}($));
+
+}($, masonryFilter));

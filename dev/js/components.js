@@ -277,7 +277,7 @@ jQuery(document).ready(function($) {
 
   $gallery.lightGallery(config);
 }());
-;(function($) {
+;(function($, masonryFilter) {
   'use strict';
 
   var $body = $('body');
@@ -285,10 +285,11 @@ jQuery(document).ready(function($) {
   var $trigger = $('.js-trigger-fadeout');
 
   var filterClicked = false;
+  var masonryFilter = masonryFilter || 'all';
 
   var config = {
     load: {
-		  filter: 'all'
+		  filter: masonryFilter
 	  },
     layout: {
 		  display: 'block'
@@ -344,9 +345,17 @@ jQuery(document).ready(function($) {
     $trigger.trigger('click');
   };
 
+  $filterBtns.each
+
+  $filterBtns.each(function() {
+    if ( $(this).hasClass('active') ) {
+      changeTitle( $(this).html() );
+    }
+  });
 
 
-}($));
+
+}($, masonryFilter));
 ;(function(){
 
   'use strict';

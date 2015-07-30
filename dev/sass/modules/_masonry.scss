@@ -51,7 +51,7 @@
       padding: $blh/4;
       border: 0;
       text-transform: uppercase;
-      background: $cinza--dark;
+      background: mix($branco, $preto, 70);
       outline: none;
 
       &.active {
@@ -61,7 +61,7 @@
       @include respond-min($b-tablet-large) {
         padding: 0 $blh/4;
         background: none;
-        color: $cinza--dark;
+        color: mix($branco, $preto, 70);
 
         &.active {
           color: $preto;
@@ -82,22 +82,15 @@
 
 
   &__item {
-    // @include col(1/1);
     display: none;
     margin-bottom: $blh/2;
     width: 100%;
-    // float: left;
-    // padding: 0 $blh/2;
 
     @include respond-min($b-tablet-small) {
       width: 50%;
       float: left;
       padding: 0 $blh/4;
     }
-
-    // &:nth-child(2n) {
-    //   float: left;
-    // }
 
     a {
       position: relative;
@@ -114,7 +107,7 @@
         &:hover {
           .masonry__item__image {
             &:after {
-              opacity: .7;
+              opacity: .85;
             }
           }
 
@@ -122,10 +115,6 @@
             opacity: 1;
             transform: translateY(0);
           }
-
-          // img {
-          //   filter: grayscale(1);
-          // }
 
           svg {
             opacity: 1;
