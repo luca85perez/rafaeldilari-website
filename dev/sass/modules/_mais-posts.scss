@@ -1,0 +1,67 @@
+.mais-posts {
+  @include clearfix();
+  text-align: left;
+
+  @include respond-min($b-desktop-large) {
+    display: none;
+  }
+
+  &__btn {
+    display: block;
+    margin: $blh 0;
+    color: $branco;
+
+    @include respond-min($b-tablet-small) {
+      display: inline-block;
+    }
+
+    a {
+      display: block;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &--previous {
+      float: left;
+
+      .mais-posts__icon {
+        margin-right: $blh;
+        transform: rotate(180deg);
+      }
+    }
+
+    &--next {
+      float: right;
+
+      .mais-posts__icon {
+        margin-left: $blh;
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    border: 2px solid $preto;
+    vertical-align: text-bottom;
+
+    svg {
+      height: $blh;
+      width: $blh;
+    }
+  }
+
+  &__text {
+    @extend %h3;
+    @extend %f-b;
+    display: none;
+    margin-top: 0;
+    color: $preto;
+    text-transform: none;
+
+    @include respond-min($b-tablet-small) {
+      display: inline-block;
+    }
+  }
+}

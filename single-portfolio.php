@@ -66,6 +66,28 @@
         endif;
         ?>
 
+        <div class="mais-posts">
+          <div class="mais-posts__btn  mais-posts__btn--previous">
+            <?php
+              previous_post_link(
+                '%link',
+                '<div class="mais-posts__icon"><svg><use xlink:href="#icon-next" /></svg></div><div class="mais-posts__text">%title</div>',
+                TRUE
+              );
+            ?>
+          </div>
+
+          <div class="mais-posts__btn  mais-posts__btn--next">
+            <?php
+              next_post_link(
+                '%link',
+                '<div class="mais-posts__text">%title</div><div class="mais-posts__icon"><svg><use xlink:href="#icon-next" /></svg></div>',
+                TRUE
+              );
+            ?>
+          </div>
+        </div>
+
         <div class="separator">
           <div class="separator__icon">
             <svg>
