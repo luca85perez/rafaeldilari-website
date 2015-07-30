@@ -59,8 +59,13 @@
     p {
       @extend %h3;
       @extend %f-r;
+      display: none;
       line-height: $blh;
       color: $preto;
+
+      @include respond-min($b-tablet-large) {
+        display: inline;
+      }
     }
   }
 
