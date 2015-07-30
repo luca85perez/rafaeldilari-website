@@ -1324,7 +1324,7 @@ h2, .full-quote__text p, .page-post h2, .page-excerpt p {
   margin-top: 1.142857142em;
   margin-bottom: 0; }
 
-h3, .home-header__lead, .page-header__title p, .page-content__section h2, .page-action__title, .page-post h3, .page-post blockquote {
+h3, .home-header__lead, .page-header__title p, .page-content__section h2, .page-action__title, .page-post h3, .page-post blockquote, .comentarios__title {
   font-size: 1.625em;
   line-height: 1.846153846em;
   margin-top: 0.923076923em;
@@ -2404,6 +2404,23 @@ a {
     right: 1.5em; }
   .float-btn a {
     display: block; }
+
+.comentarios {
+  margin-bottom: 4.5em; }
+  .comentarios__title:after {
+    content: '';
+    display: block;
+    width: 0.75em;
+    height: 2px;
+    background-color: #000; }
+  .comentarios__box {
+    color: transparent;
+    cursor: default;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    height: 0; }
 
 .rollerblade-img {
   -webkit-user-select: none;

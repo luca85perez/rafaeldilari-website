@@ -1,0 +1,22 @@
+.comentarios {
+  margin-bottom: $blh*3;
+
+  &__title {
+    @extend %h3;
+
+    &:after {
+      content: '';
+      display: block;
+      width: $blh/2;
+      height: 2px;
+      background-color: $preto;
+    }
+  }
+
+  &__box {
+    color: transparent;
+    cursor: default;
+    user-select: none;
+    height: 0;
+  }
+}

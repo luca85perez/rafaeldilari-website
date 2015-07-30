@@ -73,7 +73,12 @@
             </svg>
           </div>
         </div>
+
+        <div class="comentarios">
+          <?php echo do_shortcode('[fbcomments]'); ?>
+        </div>
       </div>
+
     </article>
     <!-- /page-content -->
   </section>
