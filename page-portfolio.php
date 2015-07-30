@@ -79,7 +79,15 @@
               $portfolioItems->the_post();
               $id = get_the_ID();
               $category = get_the_category();
-              $category = $category[0]->cat_name;
+              $i = 0;
+              $category = $category[$i]->cat_name;
+
+              if ($category == 'Portfólio') {
+                $i++;
+                $category = get_the_category();
+                $category = $category[$i]->cat_name;
+              }
+
               // Retorna a Imagem Destacada
               $img = rafaeldilari_featured_to_bg($id);
             ?>

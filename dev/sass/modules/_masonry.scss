@@ -232,7 +232,7 @@
           bottom: 25%;
           transform: translateX(-50%);
           opacity: 0;
-          transition: opacity $t-time*2 $t-function $t-time/2;
+          transition: opacity $t-time*2 $t-function;
           will-change: opacity;
         }
       }

@@ -2314,8 +2314,8 @@ a {
               -ms-transform: translateX(-50%);
                   transform: translateX(-50%);
           opacity: 0;
-          -webkit-transition: opacity 800ms cubic-bezier(0.55, 0, 0.1, 1) 200ms;
-                  transition: opacity 800ms cubic-bezier(0.55, 0, 0.1, 1) 200ms;
+          -webkit-transition: opacity 800ms cubic-bezier(0.55, 0, 0.1, 1);
+                  transition: opacity 800ms cubic-bezier(0.55, 0, 0.1, 1);
           will-change: opacity; } }
 
 .page-post {
