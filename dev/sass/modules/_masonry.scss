@@ -73,6 +73,7 @@
 
   &__grid {
     @include clearfix();
+    min-height: $blh*10;
     text-align: justify;
     will-change: transform;
   }
@@ -106,8 +107,13 @@
       @include respond-min($b-tablet-small) {
         &:hover {
           .masonry__item__image {
-            &:after {
+            &:before {
               opacity: .85;
+            }
+
+            &:after {
+              opacity: 1;
+              transform: scale(.95);
             }
           }
 
@@ -133,7 +139,7 @@
       position: relative;
 
       @include respond-min($b-tablet-small) {
-        &:after {
+        &:before {
           content: '';
           position: absolute;
           top: 0;
@@ -144,6 +150,21 @@
           opacity: 0;
           transition: opacity $t-time $t-function;
           will-change: opacity;
+        }
+
+        &:after {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          content: '';
+          margin: $blh/2;
+          border: 2px solid $preto;
+          transition  : opacity $t-time $t-function $t-time/2,
+                        transform $t-time $t-function $t-time/2;
+          will-change : opacity, transform;
         }
       }
 
