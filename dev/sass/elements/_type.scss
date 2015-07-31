@@ -57,7 +57,8 @@ p, ul, ol, pre, table, blockquote {
 
 hr {
   border : 1px solid;
-  margin : -1px 0;
+  margin : $blh*2 0;
+  opacity: .13;
 }
 
 ul ul, ol ol, ul ol, ol ul {

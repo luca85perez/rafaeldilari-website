@@ -1,0 +1,22 @@
+.post-grid {
+
+  &__title {
+    @extend %h2;
+    @extend %f-l;
+    margin-top: $blh/6;
+  }
+
+  &__excerpt {
+    p {
+      margin-top: 0;
+    }
+  }
+
+  h2 {
+    margin-top: $blh/4;
+  }
+
+  a {
+    display: inline-block;
+  }
+}

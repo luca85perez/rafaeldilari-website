@@ -1,0 +1,21 @@
+.post-meta {
+  margin-top: $blh*1.5;
+  color: $cinza--dark;
+
+  a {
+    position: static;
+    display: inline;
+    text-transform: none;
+    font-size: 1em;
+    text-decoration: underline;
+
+    &:after {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

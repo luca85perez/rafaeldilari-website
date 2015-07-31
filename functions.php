@@ -268,6 +268,16 @@ function my_post_gallery($output, $attr) {
 
 
 
+/**
+ * Custom read more
+ *
+ */
+add_filter( 'the_content_more_link', 'modify_read_more_link' );
+function modify_read_more_link() {
+  return '<p><a class="more-link" href="' . get_permalink() . '">Continue lendo</a></p>';
+}
+
+
 
 
 ?>

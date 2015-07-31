@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Single Portfolio
+ * Template Single Blog
  *
- * Exibe conteúdo dos posts da categoria portfolio
+ * Exibe o conteúdo dos posts da categoria blog
  *
  */
 ?>
@@ -51,17 +51,16 @@
 
             $category = get_the_category();
             $i = 0;
-            $category = $category[$i]->cat_name;
+            $categoryName = $category[$i]->cat_name;
 
-            if ($category == 'Portfólio') {
+            if ($categoryName == 'Blog') {
               $i++;
-              $category = get_the_category();
-              $category = $category[$i]->cat_name;
+              $categoryName = $category[$i]->cat_name;
             }
         ?>
 
         <div class="page-post">
-          <h2><?php echo esc_html( $category ); ?></h2>
+          <h2><?php echo esc_html( $categoryName ); ?></h2>
           <div class="page-excerpt">
             <?php the_excerpt(); ?>
           </div>

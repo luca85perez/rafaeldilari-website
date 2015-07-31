@@ -1318,7 +1318,7 @@ h1 {
   margin-top: 0.705882352em;
   margin-bottom: 0; }
 
-h2, .full-quote__text p, .page-post h2, .page-excerpt p {
+h2, .full-quote__text p, .page-post h2, .page-excerpt p, .post-grid__title {
   font-size: 2.625em;
   line-height: 1.142857142em;
   margin-top: 1.142857142em;
@@ -1348,7 +1348,8 @@ p, ul, ol, pre, table, blockquote {
 
 hr {
   border: 1px solid;
-  margin: -1px 0; }
+  margin: 3em 0;
+  opacity: .13; }
 
 ul ul, ol ol, ul ol, ol ul {
   margin-top: 0;
@@ -1373,7 +1374,7 @@ small, .page-content a, .full-quote__author, .masonry__filter button {
   font-weight: 700;
   font-style: normal; }
 
-.home-header__title, .page-header__title h1, .full-quote__text p, .page-excerpt p {
+.home-header__title, .page-header__title h1, .full-quote__text p, .page-excerpt p, .post-grid__title {
   font-weight: 300;
   font-style: normal; }
 
@@ -2494,6 +2495,33 @@ a {
     @media screen and (min-width: 640px) {
       .mais-posts__text {
         display: inline-block; } }
+
+.post-meta {
+  margin-top: 2.25em;
+  color: #86898c; }
+  .post-meta a {
+    position: static;
+    display: inline;
+    text-transform: none;
+    font-size: 1em;
+    text-decoration: underline; }
+    .post-meta a:after {
+      display: none; }
+    .post-meta a:hover,
+    .post-meta a:focus {
+      text-decoration: none; }
+
+.post-grid__title {
+  margin-top: 0.25em; }
+
+.post-grid__excerpt p {
+  margin-top: 0; }
+
+.post-grid h2 {
+  margin-top: 0.375em; }
+
+.post-grid a {
+  display: inline-block; }
 
 .rollerblade-img {
   -webkit-user-select: none;
