@@ -66,6 +66,7 @@
             $args = array(
               'cat' => '2',
               'order' => 'ASC',
+              'posts_per_page' => -1 // sem limite
             );
 
             // The Query
