@@ -51,17 +51,41 @@
 
             $category = get_the_category();
             $i = 0;
-            $category = $category[$i]->cat_name;
+            $categoryName = $category[$i]->cat_name;
 
-            if ($category == 'Portfólio') {
+            if ($categoryName == 'Portfólio') {
               $i++;
-              $category = get_the_category();
-              $category = $category[$i]->cat_name;
+              $categoryName = $category[$i]->cat_name;
             }
+
+            $query = '';
+
+            switch ($categoryName) {
+              case 'Ator':
+                $query = 'ator';
+                break;
+              case 'Contador de Histórias':
+                $query = 'historias';
+                break;
+              case 'Roteirista':
+                $query = 'roteirista';
+                break;
+              case 'Palhaço':
+                $query = 'palhaco';
+                break;
+            }
+
+            $portfolioLink = get_permalink(59);
+            $portfolioLink .= '?filter=';
+            $portfolioLink .= $query;
+
+            // $categoryLink = get_category_link($category[$i]->term_id);
         ?>
 
         <div class="page-post">
-          <h2><?php echo esc_html( $category ); ?></h2>
+          <h2>
+            <a href="<?php echo esc_url($portfolioLink); ?>"><?php echo esc_html( $categoryName ); ?></a>
+          </h2>
           <div class="page-excerpt">
             <?php the_excerpt(); ?>
           </div>

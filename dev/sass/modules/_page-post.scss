@@ -9,6 +9,12 @@
 
   h2 {
     @extend  %h2;
+
+    a {
+      @extend  %h4;
+      @extend %f-r;
+      text-decoration: none;
+    }
   }
 
   h3 {

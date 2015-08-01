@@ -57,10 +57,14 @@
               $i++;
               $categoryName = $category[$i]->cat_name;
             }
+
+            $categoryLink = get_category_link($category[$i]->term_id);
         ?>
 
         <div class="page-post">
-          <h2><?php echo esc_html( $categoryName ); ?></h2>
+          <h2>
+            <a href="<?php echo esc_url($categoryLink); ?>"><?php echo esc_html( $categoryName ); ?></a>
+          </h2>
           <div class="page-excerpt">
             <?php the_excerpt(); ?>
           </div>

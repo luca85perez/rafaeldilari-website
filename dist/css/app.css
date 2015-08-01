@@ -1330,7 +1330,7 @@ h3, .home-header__lead, .page-header__title p, .page-content__section h2, .page-
   margin-top: 0.923076923em;
   margin-bottom: 0; }
 
-h4, .page-post h4 {
+h4, .page-post h2 a, .page-post h4 {
   font-size: 1em;
   line-height: 1.5em;
   margin-top: 1.5em;
@@ -1382,7 +1382,7 @@ small, .page-content a, .full-quote__author, .masonry__filter button {
   font-weight: 400;
   font-style: italic; }
 
-.home-header__lead, .page-header__title p, .full-quote__author, .page-action__title {
+.home-header__lead, .page-header__title p, .full-quote__author, .page-action__title, .page-post h2 a {
   font-weight: 400;
   font-style: normal; }
 
@@ -2344,6 +2344,8 @@ a {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     opacity: .13; }
+  .page-post h2 a {
+    text-decoration: none; }
   .page-post h4 {
     font-weight: bolder; }
   .page-post ul {
