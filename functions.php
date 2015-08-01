@@ -279,5 +279,14 @@ function modify_read_more_link() {
 
 
 
+/**
+ * Checa paginação
+ *
+ */
+function show_posts_nav($query) {
+  return ($query->max_num_pages > 1);
+}
+
+
 
 ?>

@@ -49,6 +49,7 @@
       <?php
       // Args
       // cat 7 é blog
+      $do_not_duplicate = '';
       $args = array(
         'cat' => '7',
         'order'   => 'DESC',
@@ -60,6 +61,7 @@
       // The Loop
       while ( $query->have_posts() ) :
         $query->the_post();
+        $do_not_duplicate .= $post->ID . ',';
 
         $category = get_the_category();
         $i = 0;
@@ -86,7 +88,13 @@
 
       <?php
       endwhile;
-      wp_reset_postdata();
+      // wp_reset_postdata();
+      ?>
+
+      <?php
+      if ( show_posts_nav($query) ) {
+        echo do_shortcode( '[ajax_load_more post_type="post" post_format="standard" category="blog" exclude="' . $do_not_duplicate . '" transition="fade"  button_label="Mais" max_pages="0" scroll_distance="150"]');
+      }
       ?>
       </div>
     </article>

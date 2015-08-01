@@ -1,0 +1,112 @@
+button.alm-load-more-btn{
+   width:42px;
+   height: 0;
+   line-height: 42px;
+   border: none;
+   padding:0 20px;
+   display: inline-block;
+   position: relative;
+   transition: opacity $t-time $t-function,
+               height $t-time $t-function;
+   text-align: center;
+   text-decoration: none;
+   appearance: none;
+   user-select: none;
+   cursor: pointer;
+   opacity: 0;
+   will-change: transform;
+}
+	button.alm-load-more-btn:hover{
+		text-decoration: none;
+	}
+	button.alm-load-more-btn:active{
+		text-decoration: none;
+	}
+
+   button.alm-load-more-btn.loading{
+      opacity: 1;
+      height: 42px;
+   }
+
+	button.alm-load-more-btn.done{
+   }
+
+	button.alm-load-more-btn:before,
+	button.alm-load-more-btn.done:before{
+		background: none;
+		width: 0;
+	}
+
+	button.alm-load-more-btn.loading:before {
+      background: #fff url("../img/loading.gif") no-repeat center center;
+      width: 30px;
+      height: 30px;
+      margin: 6px;
+      border-radius:3px;
+      display: inline-block;
+      z-index: 0;
+      content: '';
+      position: absolute;
+      left: 0;
+      overflow: hidden;
+      // transition: width 0.5s ease-in-out;
+	}
+
+.alm-btn-wrap{
+	text-align: center;
+	padding: 0;
+  margin: 0 0 $blh;
+	overflow: hidden;
+	display: block;
+  height: auto;
+  position: absolute;
+  width: 100%;
+  bottom: $blh/2;
+}
+
+
+
+
+
+.ajax-load-more-wrap.white button.alm-load-more-btn{
+	background-color: transparent;
+	color: transparent;
+	border: 0;
+}
+	.ajax-load-more-wrap.white button.alm-load-more-btn:hover,
+	.ajax-load-more-wrap.white button.alm-load-more-btn.done{
+	}
+	.ajax-load-more-wrap.white button.alm-load-more-btn.done{
+	}
+
+
+
+
+.alm-listing{
+	margin: 0;
+	padding: 0;
+}
+	.alm-listing li{
+		background: none;
+		margin: 0 0 30px;
+		padding: 0 0 0 170px;
+		overflow: hidden;
+		position: relative;
+		list-style: none;
+	}
+	.alm-listing li.no-img{ padding: 0; }
+	.alm-listing li a{
+		color: #34383D;
+	}
+	.alm-listing li p{
+		margin: 0;
+	}
+	.alm-listing li h3{
+		margin: 0 0 10px;
+	}
+	.alm-listing li img{
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius:3px;
+	}
