@@ -145,7 +145,7 @@
   <?php
     previous_post_link(
       '%link',
-      '<div class="float-btn__icon"><svg><use xlink:href="#icon-next" /></svg></div>',
+      '<div class="float-btn__icon"><svg><use xlink:href="#icon-next" /></svg></div><div class="float-btn__text">%title</div>',
       TRUE
     );
   ?>
@@ -155,7 +155,7 @@
   <?php
     next_post_link(
       '%link',
-      '<div class="float-btn__icon"><svg><use xlink:href="#icon-next" /></svg></div>',
+      '<div class="float-btn__text">%title</div><div class="float-btn__icon"><svg><use xlink:href="#icon-next" /></svg></div>',
       TRUE
     );
   ?>

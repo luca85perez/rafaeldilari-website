@@ -2,7 +2,7 @@
   @include clearfix();
   text-align: left;
 
-  @include respond-min($b-desktop-large) {
+  @include respond-min($b-desktop-extra-large) {
     display: none;
   }
 

@@ -1,4 +1,5 @@
 .float-btn {
+  @include clearfix();
   display: none;
   opacity: 0;
   pointer-events: none;
@@ -10,13 +11,25 @@
   z-index: $z-terreo;
   transition  : opacity $t-time $t-function;
 
-  @include respond-min($b-desktop-large) {
+  @include respond-min($b-desktop-extra-large) {
     display: inline-block;
-    
+
     &.is-visible {
       opacity: 1;
       pointer-events: all;
     }
+  }
+
+  &__text {
+    @extend %h4;
+    @extend %f-b;
+    opacity: 0;
+    margin-top: $blh/6;
+    color: $preto;
+    text-transform: none;
+    transition: opacity $t-time $t-function,
+                transform $t-time $t-function;
+    will-change: transform;
   }
 
 
@@ -34,15 +47,39 @@
     left: $blh;
 
     .float-btn__icon {
+      float: left;
       transform: rotate(180deg);
+    }
+
+    .float-btn__text {
+      float: right;
+      margin-left: $blh/4;
+      transform: translateX(-25%);
     }
   }
 
   &--next {
     right: $blh;
+
+    .float-btn__icon {
+      float: right;
+    }
+
+    .float-btn__text {
+      float: left;
+      margin-right: $blh/4;
+      transform: translateX(25%);
+    }
   }
 
   a {
     display: block;
+
+    &:hover {
+      .float-btn__text {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
   }
 }
