@@ -60,13 +60,13 @@
             <?php
             $disponivel = get_post_meta($post->ID, 'disponivel_para_trabalhos', true);
             ?>
-            <div class="info-contato  ">
+            <div class="info-contato">
               <?php if ($disponivel) : ?>
-              <h4 class="info-contato__title">Estou disponível para novos trabalhos</h4>
+              <h4 class="info-contato__title" data-sr>Estou disponível para novos trabalhos</h4>
               <?php else :
               $disponivel_data = get_post_meta($post->ID, 'disponivel_a_partir_de', true);
               ?>
-              <h4 class="info-contato__title">Estarei disponível a partir de <?php echo $disponivel_data; ?></h4>
+              <h4 class="info-contato__title" data-sr>Estarei disponível a partir de <?php echo $disponivel_data; ?></h4>
               <?php endif; ?>
             </div>
           </div>
@@ -75,7 +75,7 @@
 
 
             <div class="info-contato">
-              <ul class="info-contato__links">
+              <ul class="info-contato__links" data-sr>
                 <li>
                   <a title="Facebook" target="_blank" href="//www.facebook.com/rafael.dilari">
                     <svg>
@@ -112,7 +112,7 @@
         <!-- /page-content__row -->
 
         <div class="page-content__row ">
-          <div class="form-contato">
+          <div class="form-contato  js-form">
             <?php echo do_shortcode('[contact-form-7 id="172" title="Form Contato"]'); ?>
           </div>
         </div>
