@@ -1,0 +1,42 @@
+.info-contato {
+
+  &__title {
+    @extend %small;
+    @extend %f-b;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    @extend %reset-list;
+
+    li {
+      display: inline-block;
+
+      &:not(:first-child) {
+        margin-left: $blh/3;
+      }
+    }
+
+    a {
+      display: inline-block;
+      text-transform: none;
+
+      &:after {
+        display: none;
+      }
+
+      span {
+        color: $preto;
+      }
+
+      svg {
+        height: $blh*1.5;
+        width: $blh*1.5;
+        padding: $blh/4;
+        background: $preto;
+        fill: $branco;
+      }
+    }
+  }
+}

@@ -7,6 +7,8 @@
 
 
 .btn {
+  @extend %small;
+  @extend %f-b;
   display: inline-block;
   margin-top: $blh;
   padding: $blh/2;

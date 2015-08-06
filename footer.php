@@ -13,25 +13,25 @@
       <h2 class="helper-title">Mídias Sociais</h2>
       <ul class="social-menu">
         <li class="menu-item">
-        <a title="Facebook" target="_blank" href="//www.facebook.com/rafael.dilari">
-          <svg>
-            <use xlink:href="#icon-facebook" />
-          </svg>
-        </a>
+          <a title="Facebook" target="_blank" href="//www.facebook.com/rafael.dilari">
+            <svg>
+              <use xlink:href="#icon-facebook" />
+            </svg>
+          </a>
         </li>
         <li class="menu-item">
-        <a title="Google+" target="_blank" href="//plus.google.com/109095193727132422013/posts">
-          <svg>
-            <use xlink:href="#icon-google" />
-          </svg>
-        </a>
+          <a title="Google+" target="_blank" href="//plus.google.com/109095193727132422013/posts">
+            <svg>
+              <use xlink:href="#icon-google" />
+            </svg>
+          </a>
         </li>
         <li class="menu-item">
-        <a title="Enviar um e-mail" href="mailto:contato@rafaeldilari.com.br">
-          <svg>
-            <use xlink:href="#icon-email" />
-          </svg>
-        </a>
+          <a title="Enviar um e-mail" href="mailto:contato@rafaeldilari.com.br">
+            <svg>
+              <use xlink:href="#icon-email" />
+            </svg>
+          </a>
         </li>
       </ul>
     </nav>

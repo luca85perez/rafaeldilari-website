@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
 <!-- Main content -->
-<main class="main-content">
-asdsa
-</main>
+<main class="main-content"></main>
 
 <?php get_footer(); ?>

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 45 45" enable-background="new 0 0 45 45" xml:space="preserve">
-<g>
-	<path fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" d="M37.6,18c0-8.3-6.7-15-15-15s-15,6.7-15,15
-		s9,25,15,25S37.6,26.3,37.6,18z"/>
-	<circle fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" cx="22.6" cy="17" r="7"/>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="Layer_1" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-237 339 64 90"
+	 style="enable-background:new -237 339 64 90;" xml:space="preserve">
+<g transform="translate(0,-952.36216)">
+	<g transform="translate(0,-12.991231)">
+		<path d="M-205,1304.4c-17.7,0-32,14.3-32,32c0,17.7,32,58,32,58s32-40.3,32-58S-187.3,1304.4-205,1304.4z M-205,1324.4
+			c6.6,0,12,5.4,12,12s-5.4,12-12,12s-12-5.4-12-12S-211.6,1324.4-205,1324.4z"/>
+	</g>
 </g>
 </svg>

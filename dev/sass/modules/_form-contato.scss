@@ -1,0 +1,67 @@
+.form-contato {
+  p {
+    margin: 0;
+  }
+
+  label {
+    @extend %f-b;
+    display: block;
+    cursor: pointer;
+    transition  : opacity $t-time $t-function;
+
+    &.is-hidden {
+      opacity: 0;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    position: relative;
+    top: -$blh;
+    display: block;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid $cinza;
+    background: 0;
+    transition  : border $t-time $t-function;
+
+    &:focus,
+    &:active {
+      border-color: $preto;
+      outline: none;
+    }
+  }
+
+  input[type="submit"] {
+    @extend %small;
+    @extend %f-b;
+    display: inline-block;
+    padding: $blh/2;
+    text-transform: uppercase;
+    text-align: center;
+    color: $preto;
+    border-color: currentColor;
+    border-width: 2px;
+    border-style: solid;
+    background-color: transparent;
+    transition: background-color $t-time $t-function, color $t-time $t-function, border-color $t-time $t-function;
+    will-change: background-color, color, border-color;
+
+
+    &:hover,
+    &:focus {
+      background-color: $preto;
+      color: $branco;
+      border-color: $preto;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .ajax-loader {
+    display: none;
+  }
+}
