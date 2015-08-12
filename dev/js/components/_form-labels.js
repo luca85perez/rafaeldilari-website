@@ -8,6 +8,18 @@
     var $textarea = $form.find('textarea');
     var $label;
 
+    var $formEl = $form.find('form');
+
+    $formEl.on('submit', function(){
+      $formEl.find('.is-hidden').addClass('is-hidden');
+
+      setTimeout(function(){
+        if( $formEl.hasClass('sent') === true ){
+          $formEl.find('.is-hidden').removeClass('is-hidden');
+        }
+      }, 1000);
+    });
+
     var initEvents = function($el){
       $el
         .on('focus', function(){

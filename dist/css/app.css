@@ -2598,6 +2598,7 @@ a {
   top: -1.5em;
   display: block;
   width: 100%;
+  max-width: 37.5em;
   border: 0;
   border-bottom: 2px solid #a1a3a5;
   background: 0;
@@ -2611,6 +2612,10 @@ a {
   .form-contato textarea:active {
     border-color: #000;
     outline: none; }
+  .form-contato input[type="text"].wpcf7-not-valid,
+  .form-contato input[type="email"].wpcf7-not-valid,
+  .form-contato textarea.wpcf7-not-valid {
+    border-bottom-color: red; }
 
 .form-contato input[type="submit"] {
   display: inline-block;
@@ -2636,6 +2641,20 @@ a {
 
 .form-contato .ajax-loader {
   display: none; }
+
+.form-contato .wpcf7-not-valid-tip {
+  display: none; }
+
+.form-contato .wpcf7-response-output {
+  margin: 1.5em 0 0;
+  padding: 0;
+  border: 0; }
+
+.form-contato .wpcf7-validation-errors {
+  color: red; }
+
+.form-contato .wpcf7-mail-sent-ok {
+  color: green; }
 
 .rollerblade-img {
   -webkit-user-select: none;

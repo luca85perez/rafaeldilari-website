@@ -21,6 +21,7 @@
     top: -$blh;
     display: block;
     width: 100%;
+    max-width: $blh*25;
     border: 0;
     border-bottom: 2px solid $cinza;
     background: 0;
@@ -30,6 +31,10 @@
     &:active {
       border-color: $preto;
       outline: none;
+    }
+
+    &.wpcf7-not-valid {
+      border-bottom-color: red;
     }
   }
 
@@ -63,5 +68,23 @@
 
   .ajax-loader {
     display: none;
+  }
+
+  .wpcf7-not-valid-tip {
+    display: none;
+  }
+
+  .wpcf7-response-output {
+    margin: $blh 0 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .wpcf7-validation-errors {
+    color: red;
+  }
+
+  .wpcf7-mail-sent-ok {
+    color: green;
   }
 }
