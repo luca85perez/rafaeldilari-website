@@ -54,6 +54,29 @@ if ( ! function_exists('rafaeldilari_setup') ) {
 add_action( 'after_setup_theme', 'rafaeldilari_setup' );
 
 
+
+function add_async_forscript($url){
+  if (strpos($url, '#asyncload')===false)
+    return $url;
+  else if (is_admin())
+    return str_replace('#asyncload', '', $url);
+  else
+    return str_replace('#asyncload', '', $url)."' async='async";
+}
+add_filter('clean_url', 'add_async_forscript', 11, 1);
+
+function add_defer_forscript($url){
+  if (strpos($url, '#deferload')===false)
+    return $url;
+  else if (is_admin())
+    return str_replace('#deferload', '', $url);
+  else
+    return str_replace('#deferload', '', $url)."' defer='defer";
+}
+add_filter('clean_url', 'add_defer_forscript', 11, 1);
+
+
+
 /**
  * Enqueue scripts and styles.
  *
@@ -70,7 +93,7 @@ function rafaeldilari_scripts() {
   // Main
   wp_enqueue_script(
     'rafaeldilari-main-script',
-    get_template_directory_uri() . '/dist/js/app.js',
+    get_template_directory_uri() . '/dist/js/app.js#asyncload',
     array('jquery'),
     '1.0.0',
     true
@@ -98,86 +121,19 @@ function rafaeldilari_jquery() {
     // }
 
     // register the Google CDN version
-    wp_register_script('jquery', $protocol.'//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js', false, '2.1.3');
+    wp_register_script(
+      'jquery',
+      $protocol.'//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js#asyncload',
+      false,
+      '2.1.3',
+      true
+    );
 
     // add it back into the queue
     wp_enqueue_script('jquery');
   }
 }
 add_action('template_redirect', 'rafaeldilari_jquery');
-
-
-
-// function rafaeldilari_inject_fonts() {
-//   $path = get_template_directory_uri() . '/fonts/webfont/';
-
-//   $style  = "<style>";
-
-//   $style .= "@font-face {";
-//   $style .= "font-family: 'rafaeldilari_webfont';";
-//   $style .= "  src: url('{$path}light_it-webfont.woff2') format('woff2'),";
-//   $style .= "       url('{$path}light_it-webfont.woff') format('woff'),";
-//   $style .= "       url('{$path}light_it-webfont.ttf') format('truetype');";
-//   $style .= "  font-weight: 300;";
-//   $style .= "  font-style: italic;";
-//   $style .= "}";
-
-//   $style .= "@font-face {";
-//   $style .= "font-family: 'rafaeldilari_webfont';";
-//   $style .= "  src: url('{$path}light-webfont.woff2') format('woff2'),";
-//   $style .= "       url('{$path}light-webfont.woff') format('woff'),";
-//   $style .= "       url('{$path}light-webfont.ttf') format('truetype');";
-//   $style .= "  font-weight: 300;";
-//   $style .= "  font-style: normal;";
-//   $style .= "}";
-
-//   $style .= "@font-face {";
-//   $style .= "font-family: 'rafaeldilari_webfont';";
-//   $style .= "  src: url('{$path}reg_it-webfont.woff2') format('woff2'),";
-//   $style .= "       url('{$path}reg_it-webfont.woff') format('woff'),";
-//   $style .= "       url('{$path}reg_it-webfont.ttf') format('truetype');";
-//   $style .= "  font-weight: 400;";
-//   $style .= "  font-style: italic;";
-//   $style .= "}";
-
-//   $style .= "@font-face {";
-//   $style .= "font-family: 'rafaeldilari_webfont';";
-//   $style .= "  src: url('{$path}reg-webfont.woff2') format('woff2'),";
-//   $style .= "       url('{$path}reg-webfont.woff') format('woff'),";
-//   $style .= "       url('{$path}reg-webfont.ttf') format('truetype');";
-//   $style .= "  font-weight: 400;";
-//   $style .= "  font-style: normal;";
-//   $style .= "}";
-
-//   $style .= "@font-face {";
-//   $style .= "font-family: 'rafaeldilari_webfont';";
-//   $style .= "  src: url('{$path}bld_it-webfont.woff2') format('woff2'),";
-//   $style .= "       url('{$path}bld_it-webfont.woff') format('woff'),";
-//   $style .= "       url('{$path}bld_it-webfont.ttf') format('truetype');";
-//   $style .= "  font-weight: 700;";
-//   $style .= "  font-style: italic;";
-//   $style .= "}";
-
-//   $style .= "@font-face {";
-//   $style .= "font-family: 'rafaeldilari_webfont';";
-//   $style .= "  src: url('{$path}bld-webfont.woff2') format('woff2'),";
-//   $style .= "       url('{$path}bld-webfont.woff') format('woff'),";
-//   $style .= "       url('{$path}bld-webfont.ttf') format('truetype');";
-//   $style .= "  font-weight: 700;";
-//   $style .= "  font-style: normal;";
-//   $style .= "}";
-
-//   $style .= "body {";
-//   $style .= "  font-family: sans-serif;";
-//   $style .= "}";
-//   $style .= ".fonts-loaded body {";
-//   $style .= "  font-family: 'rafaeldilari_webfont', sans-serif;";
-//   $style .= "}";
-//   $style .= "</style>";
-
-//   echo $style;
-// }
-// add_action('wp_head', 'rafaeldilari_inject_fonts');
 
 
 
@@ -201,6 +157,7 @@ add_filter('single_template', create_function(
 		return TEMPLATEPATH . "/single-{$cat->slug}.php"; }
 	return $the_template;' )
 );
+
 
 
 
@@ -268,6 +225,9 @@ function my_post_gallery($output, $attr) {
 
 
 
+
+
+
 /**
  * Custom read more
  *
@@ -279,12 +239,36 @@ function modify_read_more_link() {
 
 
 
+
+
+
 /**
  * Checa paginação
  *
  */
 function show_posts_nav($query) {
   return ($query->max_num_pages > 1);
+}
+
+
+
+
+add_action('wp_print_styles', 'my_deregister', 100);
+function my_deregister() {
+  wp_deregister_style('contact-form-7');
+}
+
+add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
+
+function my_deregister_javascript() {
+  wp_dequeue_script('ajax-load-more');
+  wp_deregister_script('ajax-load-more');
+
+  wp_dequeue_script('jquery-form');
+  wp_deregister_script('jquery-form');
+
+  wp_dequeue_script('contact-form-7');
+  wp_deregister_script('contact-form-7');
 }
 
 
