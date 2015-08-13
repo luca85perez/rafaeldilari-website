@@ -377,15 +377,13 @@ jQuery(document).ready(function($) {
   var headerHeight = 70;
   var scrollBody = function() {
     $body.animate({
-      scrollTop: $title.offset().top - headerHeight
+      scrollTop: $title.offset().top - (headerHeight + 20)
     }, 600);
   };
 
   var fakeScroll = function() {
     $trigger.trigger('click');
   };
-
-  $filterBtns.each
 
   $filterBtns.each(function() {
     if ( $(this).hasClass('active') ) {

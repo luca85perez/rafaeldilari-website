@@ -94,7 +94,7 @@
               <a href="<?php echo get_permalink(); ?>">
                 <div class="masonry__item__container">
                   <div class="masonry__item__image">
-                    <img src="<?php echo $img; ?>" alt="">
+                    <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="<?php echo $img; ?>" alt="">
                   </div>
 
                   <div class="masonry__item__content">

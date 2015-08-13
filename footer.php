@@ -78,7 +78,17 @@ switch ($filter) {
   var masonryFilter = "<?php echo $filter; ?>";
 </script>
 
-<script src="//dev.rafaeldilari.com.br:35729/livereload.js"></script>
+<script>
+function init() {
+var imgDefer = document.getElementsByTagName('img');
+for (var i=0; i<imgDefer.length; i++) {
+if(imgDefer[i].getAttribute('data-src')) {
+imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+
+<!-- <script src="//dev.rafaeldilari.com.br:35729/livereload.js"></script> -->
 
 <?php wp_footer(); ?>
 </body>

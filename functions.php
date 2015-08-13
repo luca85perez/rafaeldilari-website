@@ -93,7 +93,7 @@ function rafaeldilari_scripts() {
   // Main
   wp_enqueue_script(
     'rafaeldilari-main-script',
-    get_template_directory_uri() . '/dist/js/app.js#asyncload',
+    get_template_directory_uri() . '/dist/js/app.js',
     array('jquery'),
     '1.0.0',
     true
@@ -123,7 +123,7 @@ function rafaeldilari_jquery() {
     // register the Google CDN version
     wp_register_script(
       'jquery',
-      $protocol.'//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js#asyncload',
+      $protocol.'//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js',
       false,
       '2.1.3',
       true
@@ -261,8 +261,8 @@ function my_deregister() {
 add_action( 'wp_print_scripts', 'my_deregister_javascript', 100 );
 
 function my_deregister_javascript() {
-  wp_dequeue_script('ajax-load-more');
-  wp_deregister_script('ajax-load-more');
+  // wp_dequeue_script('ajax-load-more');
+  // wp_deregister_script('ajax-load-more');
 
   wp_dequeue_script('jquery-form');
   wp_deregister_script('jquery-form');

@@ -78,7 +78,7 @@
             $pageBg = rafaeldilari_featured_to_bg($post->ID);
             ?>
             <div>
-              <img src="<?php echo $pageBg; ?>" alt="">
+              <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="<?php echo $pageBg; ?>" alt="">
             </div>
           </figure>
         </div>
