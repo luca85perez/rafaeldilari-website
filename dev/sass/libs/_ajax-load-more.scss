@@ -38,11 +38,11 @@ button.alm-load-more-btn{
 	}
 
 	button.alm-load-more-btn.loading:before {
-      background: #fff url("../img/loading.gif") no-repeat center center;
+      // background: #fff url("../img/loading.gif") no-repeat center center;
       width: 30px;
       height: 30px;
       margin: 6px;
-      border-radius:3px;
+      // border-radius:3px;
       display: inline-block;
       z-index: 0;
       content: '';
@@ -50,6 +50,14 @@ button.alm-load-more-btn{
       left: 0;
       overflow: hidden;
       // transition: width 0.5s ease-in-out;
+
+      // background: url(../img/loading.gif) no-repeat scroll center center transparent;
+      background: url(../img/svg/icons/icon-dilari.svg) no-repeat scroll center center transparent;
+      background-size: $blh;
+      animation-name: semiFadeOut;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
 	}
 
 .alm-btn-wrap{

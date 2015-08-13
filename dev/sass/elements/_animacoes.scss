@@ -11,3 +11,41 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+@keyframes semiFadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .2;
+  }
+}
+
+@keyframes rightEnd {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: -30px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes leftEnd {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 30px;
+  }
+
+ 100% {
+   left: 0;
+ }
+}

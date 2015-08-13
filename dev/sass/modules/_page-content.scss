@@ -122,6 +122,7 @@
       &:after {
         content: '';
         display: block;
+        margin-top: $blh/4;
         width: $blh/2;
         height: 2px;
         background-color: $preto;

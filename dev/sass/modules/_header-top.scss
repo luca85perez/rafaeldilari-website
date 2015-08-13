@@ -7,7 +7,7 @@
   left       : 0;
   right      : 0;
   padding   : $blh/2 0;
-  z-index    : $z-alto;
+  z-index    : $z-alto - 1; //para o logo ficar abaixo do nav
   background : $bg;
 
   // .home & {
