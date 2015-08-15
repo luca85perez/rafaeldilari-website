@@ -63,4 +63,21 @@
     }
   }
 
+  figure {
+    margin: $blh 0;
+    max-width: 100%;
+
+    // img {
+    //   width: 100%;
+    //   min-width: 100%;
+    // }
+
+    figcaption {
+      @extend %f-r-i;
+      @extend %small;
+      margin-top: $blh/2;
+      color: $cinza--dark;
+    }
+  }
+
 }
