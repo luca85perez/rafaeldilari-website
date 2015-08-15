@@ -273,4 +273,63 @@ function my_deregister_javascript() {
 
 
 
+
+
+/**
+ * Takes a string and modifies any <img> tags within it by:
+ * - Adding the class 'lazy'
+ * - Removing the 'src' attribute
+ * - Adding the 'data-original' attribute using the original 'src' value
+ *
+ * @param $content
+ * @return string
+ */
+function themename_lazyload_modify_img_tags( $content ) {
+  $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+
+  // Get out if we don't have any content
+  if ( empty($content) )
+    return $content;
+
+  $document = new DOMDocument();
+  libxml_use_internal_errors(true);
+  $document->loadHTML(utf8_decode($content));
+
+  // Grab all image tags
+  $imgs = $document->getElementsByTagName('img');
+
+  // Loop through all image tags
+  foreach ($imgs as $img) {
+
+    $existing_class = $img->getAttribute('class');  // Store existing class (if the image has one applied)
+    $src = $img->getAttribute('src');               // Store src attribute value
+
+    // Add 'lazy' class and the existing class(es) to the image
+    // $img->setAttribute('class', "lazy $existing_class");
+
+    // Add a 'data-original' attribute with our 'src' attribute value
+    $img->setAttribute('data-src', $src);
+
+    // Remove our src attribute
+    $img->setAttribute('src', 'data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=');
+  }
+
+  $html = $document->saveHTML();
+  return $html;
+}
+
+add_filter( 'the_content', 'themename_enable_lazy_loading_the_content' );
+/**
+ * Modifies the content to enable lazy loading for all <img> tags
+ *
+ * @uses themename_lazyload_modify_img_tags()
+ * @param $content
+ * @return string
+ */
+function themename_enable_lazy_loading_the_content( $content ) {
+  return themename_lazyload_modify_img_tags($content);
+}
+
+
+
 ?>
