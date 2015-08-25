@@ -26,6 +26,11 @@ if ( ! function_exists('rafaeldilari_setup') ) {
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 825, 510, true );
 
+    add_image_size( 'portfolio-img', 600, 400, true); // capa portfolio
+    add_image_size( 'post-gallery-thumb', 300, 200, true); // thumbs das galerias
+
+
+
     // This theme uses wp_nav_menu().
     register_nav_menus( array(
       'primary' => __( 'Menu Principal', 'rafaeldilari' ),
@@ -208,7 +213,8 @@ function my_post_gallery($output, $attr) {
     // Now you loop through each attachment
     foreach ($attachments as $id => $attachment) {
         // Fetch the thumbnail (or full image, it's up to you)
-        $imgMedium = wp_get_attachment_image_src($id, 'medium');
+        // $imgMedium = wp_get_attachment_image_src($id, 'medium');
+        $imgMedium = wp_get_attachment_image_src($id, 'post-gallery-thumb');
 //      $img = wp_get_attachment_image_src($id, 'my-custom-image-size');
         $img = wp_get_attachment_image_src($id, 'full');
 
@@ -249,6 +255,12 @@ function modify_read_more_link() {
 function show_posts_nav($query) {
   return ($query->max_num_pages > 1);
 }
+
+
+
+
+
+
 
 
 
@@ -317,6 +329,13 @@ function themename_lazyload_modify_img_tags( $content ) {
   $html = $document->saveHTML();
   return $html;
 }
+
+
+
+
+
+
+
 
 add_filter( 'the_content', 'themename_enable_lazy_loading_the_content' );
 /**

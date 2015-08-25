@@ -87,7 +87,7 @@
               }
 
               // Retorna a Imagem Destacada
-              $img = rafaeldilari_featured_to_bg($id);
+              $img = rafaeldilari_featured_to_bg_portfolio($id);
             ?>
 
             <div class="masonry__item  js-grid-item"  data-category="<?php echo $category; ?>">

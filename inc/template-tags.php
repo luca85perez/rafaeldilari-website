@@ -6,6 +6,11 @@ function rafaeldilari_featured_to_bg ( $id ) {
   return $output[0];
 };
 
+function rafaeldilari_featured_to_bg_portfolio ( $id ) {
+  $output = wp_get_attachment_image_src( get_post_thumbnail_id($id), 'portfolio-img' );
+  return $output[0];
+};
+
 
 
 

@@ -97,6 +97,7 @@
                     </svg>
                   </a>
                 </li>
+                <?php /* ?>
                 <li>
                   <a title="Google Maps" target="_blank" href="//www.google.com/maps/place/Curitiba+-+PR,+Brasil/@-25.4992789,-49.2148237,11z/data=!4m2!3m1!1s0x94dce35351cdb3dd:0x6d2f6ba5bacbe809">
                     <svg>
@@ -105,6 +106,7 @@
                     <span>Curitiba, Paraná</span>
                   </a>
                 </li>
+                <?php */ ?>
               </ul>
             </div>
           </div>
