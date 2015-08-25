@@ -14,10 +14,11 @@
 
 
   &__img {
-    filter     : grayscale(100%) brightness(50%);
+    // filter     : grayscale(100%) brightness(50%);
 
     position   : absolute;
-    top        : $blh*3;
+    // top        : $blh*3;
+    top        : 0;
     right      : 0;
     display    : block;
     min-width  : 100%;
