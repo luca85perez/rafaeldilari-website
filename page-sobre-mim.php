@@ -75,7 +75,7 @@
           <figure class="page-content__img" data-sr>
             <?php
             // Retorna a Imagem Destacada
-            $pageBg = rafaeldilari_featured_to_bg($post->ID);
+            $pageBg = rafaeldilari_featured_to_bg_portfolio($post->ID);
             ?>
             <div>
               <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="<?php echo $pageBg; ?>" alt="">
