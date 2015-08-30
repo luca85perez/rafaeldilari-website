@@ -2,30 +2,30 @@
   font-family: "rafaeldilari_webfont";
   font-weight: 700;
   font-style: italic;
-  src: url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/bld_it-webfont.woff") format("woff"), url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/bld_it-webfont.ttf") format("truetype"); }
+  src: url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/bld_it-webfont.woff") format("woff"), url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/bld_it-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "rafaeldilari_webfont";
   font-weight: 700;
   font-style: normal;
-  src: url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/bld-webfont.woff") format("woff"), url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/bld-webfont.ttf") format("truetype"); }
+  src: url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/bld-webfont.woff") format("woff"), url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/bld-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "rafaeldilari_webfont";
   font-weight: 300;
   font-style: normal;
-  src: url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/light-webfont.woff") format("woff"), url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/light-webfont.ttf") format("truetype"); }
+  src: url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/light-webfont.woff") format("woff"), url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/light-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "rafaeldilari_webfont";
   font-weight: 400;
   font-style: italic;
-  src: url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/reg_it-webfont.woff") format("woff"), url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/reg_it-webfont.ttf") format("truetype"); }
+  src: url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/reg_it-webfont.woff") format("woff"), url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/reg_it-webfont.ttf") format("truetype"); }
 
 @font-face {
   font-family: "rafaeldilari_webfont";
   font-weight: 400;
   font-style: normal;
-  src: url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/reg-webfont.woff") format("woff"), url("http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/reg-webfont.ttf") format("truetype"); }
+  src: url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/reg-webfont.woff") format("woff"), url("http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/reg-webfont.ttf") format("truetype"); }
 
 /*# sourceMappingURL=web-fonts.css.map */

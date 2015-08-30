@@ -98,7 +98,7 @@ function rafaeldilari_scripts() {
   wp_enqueue_script(
     'rafaeldilari-main-script',
     get_template_directory_uri() . '/dist/js/app.js',
-    array('jquery'),
+    array(),
     '1.0.0',
     true
   );
@@ -110,34 +110,34 @@ add_action( 'wp_enqueue_scripts', 'rafaeldilari_scripts' );
  * Load custom jQuery
  *
  */
-function rafaeldilari_jquery() {
-
-  // only use this method is we're not in wp-admin
-  if (!is_admin()) {
-
-    // deregister the original version of jQuery
-    wp_deregister_script('jquery');
-
-    // discover the correct protocol to use
-    $protocol='http:';
-    // if($_SERVER['HTTPS']=='on') {
-    //   $protocol='https:';
-    // }
-
-    // register the Google CDN version
-    wp_register_script(
-      'jquery',
-      $protocol.'//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js',
-      false,
-      '2.1.3',
-      true
-    );
-
-    // add it back into the queue
-    wp_enqueue_script('jquery');
-  }
-}
-add_action('template_redirect', 'rafaeldilari_jquery');
+// function rafaeldilari_jquery() {
+//
+//   // only use this method is we're not in wp-admin
+//   if (!is_admin()) {
+//
+//     // deregister the original version of jQuery
+//     wp_deregister_script('jquery');
+//
+//     // discover the correct protocol to use
+//     $protocol='http:';
+//     // if($_SERVER['HTTPS']=='on') {
+//     //   $protocol='https:';
+//     // }
+//
+//     // register the Google CDN version
+//     wp_register_script(
+//       'jquery',
+//       $protocol.'//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js',
+//       false,
+//       '2.1.3',
+//       true
+//     );
+//
+//     // add it back into the queue
+//     wp_enqueue_script('jquery');
+//   }
+// }
+// add_action('template_redirect', 'rafaeldilari_jquery');
 
 
 
