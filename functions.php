@@ -1,5 +1,4 @@
 <?php
-
 if ( ! function_exists('rafaeldilari_setup') ) {
   /**
    * Sets up theme defaults and registers support for various WordPress features.
@@ -348,7 +347,4 @@ add_filter( 'the_content', 'themename_enable_lazy_loading_the_content' );
 function themename_enable_lazy_loading_the_content( $content ) {
   return themename_lazyload_modify_img_tags($content);
 }
-
-
-
 ?>

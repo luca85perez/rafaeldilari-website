@@ -5,7 +5,8 @@
 //*****************************************************
 
 // Web-Fonts
-$web-fonts-path: "http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/";
+// $web-fonts-path: "http://dev.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/";
+$web-fonts-path: "http://www.rafaeldilari.com.br/wp-content/themes/rafaeldilari/fonts/";
 
 $fonts-bold-italic: (
   woff2 : $web-fonts-path + "bld_it-webfont.woff2",
@@ -147,4 +148,3 @@ $e-box-shadow  : 0 2px 0 0 rgba($preto, .35);
 //***************************************
 $t-function : cubic-bezier(.55,0,.1,1);
 $t-time     : 400ms;
-
