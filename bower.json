@@ -17,10 +17,8 @@
     "normalize-opentype.css": "~0.2.1",
     "super-gradient": "*",
     "sass-toolkit": "~2.7.0",
-    "sassy-gridlover": "~1.2.0",
     "jeet": "~6.1.2",
     "scrollReveal.js": "~2.3.2",
-    "jquery-gi-thewall": "~1.0.2",
     "lightgallery": "~1.1.5"
   },
   "dependencies": {

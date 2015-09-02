@@ -67,7 +67,6 @@ module.exports = function(grunt) {
           'bower_components/jquery/dist/jquery.js',
           'bower_components/scrollReveal.js/scrollReveal.js',
           'bower_components/mixitup/src/jquery.mixitup.js',
-          // 'bower_components/jquery-gi-thewall/jQuery.GI.TheWall.min.js',
           'bower_components/lightgallery/light-gallery/js/lightGallery.min.js',
           'dev/js/plugins/*.js'
         ],
