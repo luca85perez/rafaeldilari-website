@@ -8,7 +8,8 @@
   z-index    : $z-terreo;
   background : $bg;
 
-  .home & {
+  .home &,
+  .error404 & {
     display: none;
     position: fixed;
     bottom  : 0;
