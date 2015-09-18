@@ -29,11 +29,14 @@
           $subtitulo = get_post_meta($post->ID, 'subtitulo', true);
           ?>
           <h1 class="home-header__title"><?php echo $subtitulo; ?></h1>
+          <small class="home-header__cite"><em>—Paulo Leminski</em></small>
         </header>
 
+        <?php /*
         <div class="home-header__lead">
           <?php the_content(); ?>
         </div>
+        */ ?>
 
         <div class="btn-group">
           <a class="btn  btn--light  btn--ghost" href="<?php echo get_permalink(2); ?>">Sobre Mim</a>

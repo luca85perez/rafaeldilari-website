@@ -37,13 +37,19 @@
   }
 
   blockquote {
-    @extend  %h3;
-    @extend %f-r-i;
+    @extend  %h4;
+    @extend %f-b-i;
     margin-left: 0;
     padding-left: $blh/2;
     border-left: 2px solid $preto;
     // font-style: italic;
     line-height: 1.4;
+
+    cite {
+      @extend %small;
+      display: block;
+    }
+
   }
 
   a {

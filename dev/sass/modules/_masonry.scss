@@ -186,11 +186,33 @@
         margin-top: 0;
         margin-bottom: 0;
         margin-left: $blh/2;
+        line-height: 1.2;
+
+        width: 100%;
+        max-width: calc(100% - 70px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:after {
+          display: none;
+        }
 
         @include respond-min($b-tablet-small) {
           margin-top: $blh/4;
           margin-bottom: $blh/4;
           margin-left: $blh;
+
+          padding: 0 $blh;
+          width: 100%;
+          max-width: none;
+          white-space: normal;
+          overflow: hidden;
+          text-overflow: inherit;
+
+          &:after {
+            display: block;
+          }
         }
       }
 

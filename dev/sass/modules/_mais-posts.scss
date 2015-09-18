@@ -34,6 +34,7 @@
 
     &--next {
       float: right;
+      text-align: right;
 
       .mais-posts__icon {
         margin-left: $blh;
@@ -44,7 +45,7 @@
   &__icon {
     display: inline-block;
     border: 2px solid $preto;
-    vertical-align: text-bottom;
+    vertical-align: 1.25em;
 
     svg {
       height: $blh;
@@ -59,6 +60,11 @@
     margin-top: 0;
     color: $preto;
     text-transform: none;
+
+    width: 230px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
     @include respond-min($b-tablet-small) {
       display: inline-block;

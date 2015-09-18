@@ -16,7 +16,7 @@
       <div class="page-header__bg">
         <?php
         // Retorna a Imagem Destacada
-        $pageBg = rafaeldilari_featured_to_bg($post->ID);
+        $pageBg = rafaeldilari_featured_to_bg_hero($post->ID);
         ?>
         <img src="<?php echo $pageBg; ?>" alt="">
       </div>

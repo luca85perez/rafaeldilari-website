@@ -60,6 +60,7 @@
             <?php
             $disponivel = get_post_meta($post->ID, 'disponivel_para_trabalhos', true);
             ?>
+            <?php /*
             <div class="info-contato">
               <?php if ($disponivel) : ?>
               <h4 class="info-contato__title" data-sr>Estou disponível para novos trabalhos</h4>
@@ -69,6 +70,7 @@
               <h4 class="info-contato__title" data-sr>Estarei disponível a partir de <?php echo $disponivel_data; ?></h4>
               <?php endif; ?>
             </div>
+            */ ?>
           </div>
 
           <div class="page-content__text">
@@ -118,14 +120,14 @@
             <?php echo do_shortcode('[contact-form-7 id="172" title="Form Contato"]'); ?>
           </div>
         </div>
-
         <?php
           endwhile;
           wp_reset_postdata();
         endif;
         ?>
-
       </div>
+
+      
 
 
 

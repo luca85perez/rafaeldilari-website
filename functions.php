@@ -26,7 +26,8 @@ if ( ! function_exists('rafaeldilari_setup') ) {
     set_post_thumbnail_size( 825, 510, true );
 
     add_image_size( 'portfolio-img', 600, 400, true); // capa portfolio
-    add_image_size( 'post-gallery-thumb', 300, 200, true); // thumbs das galerias
+    add_image_size( 'post-gallery-thumb', 300, 200, array( 'left', 'top' )); // thumbs das galerias
+    add_image_size( 'hero-max', 1980, 1080, true); // hero max size
 
 
 

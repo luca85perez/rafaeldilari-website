@@ -22,11 +22,16 @@
 <head>
   <meta charset="utf-8">
 
+  <meta name="language" content="Portuguese" />
+  <meta name="audience" content="all" />
+  <meta name="rating" content="general" />
+  <meta name="revisit-after" content="7 days" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="hhTikw38aCVLY6OK0uAC19kJChGyvitx96Ulf8ebr8A" />
 
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <meta name="description" content="Portfólio e blog do Ator, Palhaço, Roteirista e Contador de Histórias, Rafael Di Lari." />
+  <meta name="keywords" content="rafael di lari, ator, palhaço, roteirista, contador de histórias" />
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <link rel="dns-prefetch" href="https://connect.facebook.net">

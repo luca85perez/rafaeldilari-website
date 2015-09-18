@@ -11,6 +11,11 @@ function rafaeldilari_featured_to_bg_portfolio ( $id ) {
   return $output[0];
 };
 
+function rafaeldilari_featured_to_bg_hero ( $id ) {
+  $output = wp_get_attachment_image_src( get_post_thumbnail_id($id), 'hero-max' );
+  return $output[0];
+};
+
 
 
 

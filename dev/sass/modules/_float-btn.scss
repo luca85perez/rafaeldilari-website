@@ -24,8 +24,11 @@
     @extend %h4;
     @extend %f-b;
     opacity: 0;
-    margin-top: $blh/6;
-    color: $preto;
+    margin-top: 0;
+    padding: 0 $blh/4;
+    line-height: 34px;
+    color: $branco;
+    background-color: $preto;
     text-transform: none;
     transition: opacity $t-time $t-function,
                 transform $t-time $t-function;
@@ -53,8 +56,8 @@
 
     .float-btn__text {
       float: right;
-      margin-left: $blh/4;
-      transform: translateX(-25%);
+      margin-left: 0;
+      transform: translateX(-$blh/4);
     }
   }
 
@@ -67,8 +70,9 @@
 
     .float-btn__text {
       float: left;
-      margin-right: $blh/4;
-      transform: translateX(25%);
+      margin-right: 0;
+      text-align: right;
+      transform: translateX($blh/4);
     }
   }
 

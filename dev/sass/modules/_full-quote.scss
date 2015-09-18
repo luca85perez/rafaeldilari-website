@@ -45,9 +45,10 @@
     }
 
     p {
-      @extend %h2;
-      @extend %f-l;
+      @extend %h3;
+      @extend %f-r;
       margin: 0;
+      line-height: 1.2;
     }
   }
 
@@ -67,4 +68,3 @@
     }
   }
 }
-
