@@ -92,7 +92,7 @@ function rafaeldilari_scripts() {
     'rafaeldilari-styles',
     get_template_directory_uri() . '/dist/css/app.css',
     array(),
-    '1.0'
+    '1.1'
   );
 
   // Main
@@ -217,8 +217,9 @@ function my_post_gallery($output, $attr) {
         $imgMedium = wp_get_attachment_image_src($id, 'post-gallery-thumb');
 //      $img = wp_get_attachment_image_src($id, 'my-custom-image-size');
         $img = wp_get_attachment_image_src($id, 'full');
+        $caption = $attachment->post_excerpt;
 
-        $output .= "<li class=\"gallery__item\" data-src=\"{$img[0]}\">\n";
+        $output .= "<li class=\"gallery__item\" data-sub-html=\"<div class='custom-html'><h4>{$caption}</h4></div>\" data-src=\"{$img[0]}\">\n";
         $output .= "<img src=\"{$imgMedium[0]}\" width=\"{$imgMedium[1]}\" height=\"{$imgMedium[2]}\" alt=\"\" />\n";
         $output .= "</li>\n";
     }
