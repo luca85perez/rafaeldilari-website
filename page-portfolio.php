@@ -65,7 +65,7 @@
             // Args
             $args = array(
               'cat' => '2',
-              'order' => 'ASC',
+              'order' => 'DESC',
               'posts_per_page' => -1 // sem limite
             );
 
